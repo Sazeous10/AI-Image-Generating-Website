@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import { logo } from './assets';
+import { favicon } from './assets';
 import { Home, CreatePost } from './pages';
 const App = () => {
   return (
@@ -8,8 +8,9 @@ const App = () => {
       <header className='w-full flex justify-between items-center bg-white
       sm:px-8 px-4 border-b border-b-[#e6ebf4]'>
         <Link to="/">
-          <div>
-            <h1 className='font-bold border border-[#000] p-2 rounded-md'>Image Generating AI</h1>
+          <div className='flex p-2 border border-[#000] rounded-md gap-2'>
+          <img src={favicon} className='h-10'/>
+            <h1 className='font-bold p-2'>Image Generating AI</h1>
           </div>
         </Link>
         <Link to="/create-post"
