@@ -1,5 +1,5 @@
 import download from './download.png';
-import favicon from './favicon.jpeg';
+import favicon from './favicon.png';
 import preview from './preview.png';
 
 export {
