@@ -10,7 +10,7 @@ const App = () => {
         <Link to="/">
           <div className='flex p-2 border border-[#000] rounded-md gap-2'>
           <img src={favicon} className='h-10'/>
-            <h1 className='font-bold p-2'>Image Generating AI</h1>
+            <h1 className='font-bold p-2'>Imagify AI</h1>
           </div>
         </Link>
         <Link to="/create-post"
