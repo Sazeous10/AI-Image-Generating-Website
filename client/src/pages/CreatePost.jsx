@@ -70,17 +70,25 @@ const CreatePost = () => {
         const randomPrompt = getRandomPrompt(form.prompt);
         setForm({ ...form, prompt: randomPrompt });
     };
-
     return (
         <section className="max-w-7xl mx-auto">
-            <div>
-                <h1 className="font-extrabold text-[#222328] text-[32px]">Generate Image</h1>
+            <div className='mt-10'>
+            <div className='justify-items-center p-8 rounded-[20px] shadow-2xl border border-gray-300 bg-gray-100'>
+            <div className='justify-items-center'>
+                <h1 className="font-extrabold text-[#222328] text-[32px]">Generate Your Image</h1>
                 <p className="mt-2 text-[#666e75] text-[16px] max-w-[500px]">
-                    Generate imaginative and visually stunning images through Hugging Face AI and share them with the community
+                    Imagine and Generate stunning images through AI
+                </p>
+                <p className="mt-2 text-[#666e75] text-[16px] max-w-[500px]">
+                and post them at Imagify Gallery
                 </p>
             </div>
-            <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
-                <div className="flex flex-col gap-5">
+
+            <hr class="border-t border-black border-[2px] w-full mt-5"></hr>
+
+            <form className="mt-10 max-w-3xl" onSubmit={handleSubmit}>
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
+                    <div className='flex flex-col gap-5'>
                     <FormField
                         LabelName="Your name"
                         type="text"
@@ -99,7 +107,9 @@ const CreatePost = () => {
                         isSurpriseMe
                         handleSurpriseMe={handleSurpriseMe}
                     />
-                    <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
+                    </div>
+                    <div className='justify-items-center'>
+                    <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-80 p-3 h-80 flex justify-center items-center shadow-xl">
                         {form.photo ? (
                             <img src={form.photo} alt={form.prompt} className="w-full h-full object-contain" />
                         ) : (
@@ -111,8 +121,9 @@ const CreatePost = () => {
                             </div>
                         )}
                     </div>
+                    </div>
                 </div>
-                <div className="mt-5 flex gap-5">
+                <div className="mt-5 flex gap-5 justify-self-center shadow-2xl">
                     <button
                         type="button"
                         onClick={generateImg}
@@ -121,18 +132,20 @@ const CreatePost = () => {
                         {generatingImg ? 'Generating...' : 'Generate'}
                     </button>
                 </div>
-                <div className="mt-10">
+                <div className="mt-10 justify-items-center">
                     <p className="mt-2 text-[#666e75] text-[14px]">
-                        Once you have created the image you want, you can share it with others in the community
+                        Post the generated image with others in the Imagify Gallery
                     </p>
                     <button
                         type="submit"
-                        className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center hover:scale-105"
+                        className="shadow-2xl mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center hover:scale-105"
                     >
                         {loading ? 'Sharing...' : 'Share with the community'}
                     </button>
                 </div>
             </form>
+            </div>
+            </div>
         </section>
     );
 };
