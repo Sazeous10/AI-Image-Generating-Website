@@ -109,7 +109,7 @@ const CreatePost = () => {
                     />
                     </div>
                     <div className='justify-items-center'>
-                    <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-80 p-3 h-80 flex justify-center items-center shadow-xl">
+                    <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-3 sm:w-80 sm:h-80 flex justify-center items-center shadow-xl">
                         {form.photo ? (
                             <img src={form.photo} alt={form.prompt} className="w-full h-full object-contain" />
                         ) : (
