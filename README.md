@@ -1,4 +1,4 @@
-# AI Image Generation and Community Sharing Platform
+# 🤖 AI Image Generation and Community Sharing Platform
 
 This project is an AI-powered image generation website where users can create images using prompts and share their creations on a community page. The platform utilizes a model from Hugging Face for image generation and stores images in Cloudinary.
 
@@ -96,13 +96,4 @@ router.post('/post', async (req, res) => {
 - **AI Model**: Hugging Face API
 - **Image Storage**: Cloudinary
 
-### License
-This project is licensed under the MIT License.
-
 --- 
-
-MIT License
-
-Copyright (c) 2024 Ranjit Raj Nahak
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files...
