@@ -11,9 +11,9 @@ This project is an AI-powered image generation website where users can create im
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/en/download/)
-- MongoDB Atlas account
-- Cloudinary account
-- Hugging Face API access
+- [MongoDB Atlas account](https://www.mongodb.com/products/platform/atlas-database)
+- [Cloudinary account](https://cloudinary.com/)
+- [Hugging Face API access](https://huggingface.co/models)
 
 ### Environment Variables
 Create a `.env` file in the `server` folder with:
